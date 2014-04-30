@@ -11,3 +11,8 @@ Links Auditor helps you to create and manage the .htaccess redirects for your si
 Find the link to the installed Links Auditor in the Settings tab in the admin menu.
 
 It will set up a new table in your wordpress install called 'la_redirects' that will store all of your redirect information.
+
+== Screenshots ==
+1. Add your section, title, old links, new links.
+
+2. Copy your 301 redirects and paste into your .htaccess file for your wordpress site.
