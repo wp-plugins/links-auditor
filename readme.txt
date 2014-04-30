@@ -1,7 +1,9 @@
 === Links Auditor ===
 Contributors: tonyspiro
 Tags: links auditor, redirects, redirect, pages, la redirects, bootstrap, htaccess, redirect old site links, redirect new site links, manage redirects
-Tested up to: 3.83
+Tested up to: 3.9
+
+Links Auditor is a plugin that helps you to create and manage the .htaccess redirects for your site.
 
 == Description ==
 Links Auditor helps you to create and manage the .htaccess redirects for your site.  This plugin is perfect for when you are creating a new site for a client and need to manage all of the redirects from the old site to the new one.  
