@@ -71,8 +71,8 @@ function la_redirect_options() {
 					<tr>
 						<td class="col-md-3">Title</td>
 						<td class="col-md-3">Section</td>
-						<td class="col-md-3">New Link</td>
 						<td class="col-md-3">Old Link</td>
+						<td class="col-md-3">New Link</td>
 					</tr>
 					<?php
 					/// Custom redirects
@@ -88,10 +88,10 @@ function la_redirect_options() {
 							<tr id="customRow<?php echo $custom_id; ?>">
 								<td><input type="text" class="form-control" placeholder="Title" name="title[]" value="<?php echo $fields['title']; ?>" /></td>
 								<td><input type="text" class="form-control" placeholder="Section" name="section[]" value="<?php echo $fields['section']; ?>" /></td>
-								<td><input type="text" class="form-control" placeholder="New Link" name="new_link[]" value="<?php echo $fields['new_link']; ?>" /></td>
+								<td><input placeholder="Old Link" name="old_link[]" class="form-control" value="<?php echo $fields['old_link']; ?>" /></td>
 								<td>
 									<table class="no-border col-sm-12">
-										<tr><td><input placeholder="Old Link" name="old_link[]" class="form-control" value="<?php echo $fields['old_link']; ?>" /></td><td><a title="remove row" class="remove-custom pull-right" href="#" data-id="<?php echo $custom_id; ?>">x</a></td></tr>
+										<tr><td><input type="text" class="form-control" placeholder="New Link" name="new_link[]" value="<?php echo $fields['new_link']; ?>" /></td><td><a title="remove row" class="remove-custom pull-right" href="#" data-id="<?php echo $custom_id; ?>">x</a></td></tr>
 									</table>
 								</td>
 							</tr>
@@ -138,9 +138,9 @@ function la_redirect_options() {
 				var newRow = '<tr id="row' + rowId + '">' + 
 				'<td><input type="text" class="form-control" placeholder="Title" name="title[]" /></td>' + 
 				'<td><input type="text" class="form-control" placeholder="Section" name="section[]" /></td>' + 
-				'<td><input type="text" class="form-control" placeholder="New Link" name="new_link[]" /></td>' + 
+				'<td><input name="old_link[]" class="pull-left form-control" placeholder="Old Link" /></td>' + 
 				'<td><table class="no-border col-sm-12">' + 
-				'<tr><td><input name="old_link[]" class="pull-left form-control" placeholder="Old Link" /></td><td><a title="remove row" class="remove-row pull-right" href="#" data-id="' + rowId + '">x</a></td>' +
+				'<tr><td><input type="text" class="form-control" placeholder="New Link" name="new_link[]" /></td><td><a title="remove row" class="remove-row pull-right" href="#" data-id="' + rowId + '">x</a></td>' +
 				'</tr></table></td>' + 
 				'</tr>';
 
