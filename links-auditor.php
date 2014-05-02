@@ -41,7 +41,6 @@ error_reporting(E_ALL);
 
 include('controllers.php');
 
-/** Step 3. */
 function la_redirect_options() {
 
 	$redirects = new Redirects;
