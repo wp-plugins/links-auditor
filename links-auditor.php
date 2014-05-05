@@ -65,7 +65,7 @@ function la_redirect_options() {
 				All fields are optional.  When you are done adding your redirects, click on the "Get .htaccess redirects", copy the code and paste into your .htaccess file.
 			</p>
 			<form action="" method="post">
-				<input type="hidden" name="type" value="make_file">
+				<input type="hidden" name="links_audit_submit" value="true">
 				<table class="table table-striped table-bordered">
 					<tr>
 						<td class="col-md-3">Title</td>
