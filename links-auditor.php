@@ -4,7 +4,7 @@
 Plugin Name: Links Auditor
 Plugin URI: http://tonyspiro.com
 Description: A plugin that helps you manage the old link redirects for a new site.  Add your old links, where they should redirect to and paste the plain text output to your wordpress install's .htaccess file.
-Version: 0.1
+Version: 0.12
 Author: Tony Spiro
 Author URI: http://tonyspiro.com
 License: GPL2
