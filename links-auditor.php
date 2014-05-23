@@ -3,7 +3,7 @@
 
 Plugin Name: Links Auditor
 Plugin URI: http://tonyspiro.com
-Description: A plugin that helps you manage the old link redirects for a new site.  Add your old links, where they should redirect to and paste the plain text output to your wordpress install's .htaccess file.
+Description: A plugin that helps you manage the old link redirects for a new site.  Add your old links and new links and Link Auditor works automatically.
 Version: 0.2
 Author: Tony Spiro
 Author URI: http://tonyspiro.com
@@ -84,8 +84,8 @@ function la_redirect_options() {
 			<h1>Links Auditor 301 Redirects</h1>
 			<p>
 				Add your old paths <code>/old-path-from-old-site</code> in the old link field and the new path <code>/new-path-in-new-site</code> in the new link fields. Title and Section are there for your organization and convenience.  
-				All fields are optional.  When you are done adding your redirects, click on the "Get .htaccess redirects", copy the code and paste into your .htaccess file.
-			</p>
+				Links Auditor works automatically by redirecting users from your old links to your new ones.			
+</p>
 			<form action="" method="post">
 				<input type="hidden" name="links_audit_submit" value="true">
 				<table class="table table-striped table-bordered">

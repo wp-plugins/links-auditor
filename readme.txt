@@ -3,10 +3,10 @@ Contributors: tonyspiro
 Tags: links auditor, redirects, redirect, pages, la redirects, bootstrap, htaccess, redirect old site links, redirect new site links, manage redirects
 Tested up to: 3.9
 
-UPDATE: This plugin now has automatic redirect functionality. Just add your redirects and Links Auditor will automatically redirect without adding the code to the .htaccess file.
+UPDATE: This plugin now has automatic redirect functionality. Add your redirects and Links Auditor will just work. No .htaccess editing needeed.
 
 == Description ==
-Links Auditor helps you to create and manage the .htaccess redirects for your site.  This plugin is perfect for when you are creating a new site for a client and need to manage all of the redirects from the old site to the new one.  
+This plugin is perfect for when you are creating a new site for a client and need to manage all of the redirects from the old site to the new one.  
 
 Find the link to the installed Links Auditor in the Settings tab in the admin menu.
 
