@@ -15,4 +15,4 @@ It will set up a new table in your wordpress install called 'la_redirects' that 
 == Screenshots ==
 1. Add your section, title, old links, new links.
 
-2. Copy your 301 redirects and paste into your .htaccess file for your wordpress site.
+2. (Optional) Copy your 301 redirects and paste into your .htaccess file for your wordpress site.
