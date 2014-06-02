@@ -41,23 +41,25 @@ error_reporting(E_ALL);
 
 include('controllers.php');
 
-/// Test page for redirect
-
 $siteurl = get_bloginfo('siteurl');
 
+function getUrl() {
+  $url  = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] :  'https://'.$_SERVER["SERVER_NAME"];
+  $url .= $_SERVER["REQUEST_URI"];
+  return $url;
+}
+
+$actual_link = getUrl();
 
 $all_redirects = $redirects->getAll();
-
-/// Get slug minus siteurl
-$la_slug = str_replace($siteurl, "", $_SERVER['REQUEST_URI']);
 
 if($all_redirects){
 	foreach($all_redirects as $redirect_id){
 		$la_redirect = $redirects->getFields($redirect_id);
 		$la_old_link = str_replace($siteurl, "", $la_redirect['old_link']);
 		$la_new_link = str_replace($siteurl, "", $la_redirect['new_link']);
-		if($la_slug == $la_old_link){
-			header("Location: " . $la_new_link);
+		if($actual_link == $siteurl . $la_old_link){
+			header("Location: " . $siteurl . $la_new_link);
 			die();
 		}
 	}
