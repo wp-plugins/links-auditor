@@ -74,71 +74,69 @@ function la_redirect_options() {
 	<script src="<?php echo plugins_url(); ?>/links-auditor/lib/bootstrap-3.1.1.js"></script>
 	<link rel="stylesheet" href="<?php echo plugins_url(); ?>/links-auditor/style.css" />
 
-	<div class="row">
-		<div class="container">
-			<?php
-			if($_GET['page']=="links-auditor" && isset($_GET['message'])){
-				?>
-				<div class="alert alert-success">Redirects saved.<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
-				<?php
-			}
+	<div class="container">
+		<?php
+		if($_GET['page']=="links-auditor" && isset($_GET['message'])){
 			?>
-			<h1>Links Auditor 301 Redirects</h1>
-			<p>
-				Add your old paths <code>/old-path-from-old-site</code> in the old link field and the new path <code>/new-path-in-new-site</code> in the new link fields. Title and Section are there for your organization and convenience.  
-				Links Auditor works automatically by redirecting users from your old links to your new ones.			
+			<div class="alert alert-success">Redirects saved.<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+			<?php
+		}
+		?>
+		<h1>Links Auditor 301 Redirects</h1>
+		<p>
+			Add your old paths <code>/old-path-from-old-site</code> in the old link field and the new path <code>/new-path-in-new-site</code> in the new link fields. Title and Section are there for your organization and convenience.  
+			Links Auditor works automatically by redirecting users from your old links to your new ones.			
 </p>
-			<form action="" method="post">
-				<input type="hidden" name="links_audit_submit" value="true">
-				<table class="table table-striped table-bordered">
-					<tr>
-						<td class="col-md-3">Title</td>
-						<td class="col-md-3">Section</td>
-						<td class="col-md-3">Old Link</td>
-						<td class="col-md-3">New Link</td>
-					</tr>
-					<?php
-					/// Custom redirects
-					$custom_redirects = $redirects->getAll();
+		<form action="" method="post">
+			<input type="hidden" name="links_audit_submit" value="true">
+			<table class="table table-striped table-bordered">
+				<tr>
+					<td class="col-md-3">Title</td>
+					<td class="col-md-3">Section</td>
+					<td class="col-md-3">Old Link</td>
+					<td class="col-md-3">New Link</td>
+				</tr>
+				<?php
+				/// Custom redirects
+				$custom_redirects = $redirects->getAll();
 
-					if($custom_redirects){
-						?>
-						<?php
-						foreach($redirects->getAll() as $custom_id){
-
-							$fields = $redirects->getFields($custom_id);
-							?>
-							<tr id="customRow<?php echo $custom_id; ?>">
-								<td><input type="text" class="form-control" placeholder="Title" name="title[]" value="<?php echo $fields['title']; ?>" /></td>
-								<td><input type="text" class="form-control" placeholder="Section" name="section[]" value="<?php echo $fields['section']; ?>" /></td>
-								<td><input placeholder="Old Link" name="old_link[]" class="form-control" value="<?php echo $fields['old_link']; ?>" /></td>
-								<td>
-									<table class="no-border col-sm-12">
-										<tr><td><input type="text" class="form-control" placeholder="New Link" name="new_link[]" value="<?php echo $fields['new_link']; ?>" /></td><td><a title="remove row" class="remove-custom pull-right" href="#" data-id="<?php echo $custom_id; ?>">x</a></td></tr>
-									</table>
-								</td>
-							</tr>
-							<?php
-						}
-
-					}
+				if($custom_redirects){
 					?>
-					<tr id="addRow">
-						<td colspan="10"><a id="addRowBtn" class="btn btn-default pull-right" href="#">+ Add a new row</a></td>
-					</tr>
-					<tr>
-						<td colspan="10" class="text-right"><button type="submit" class="btn btn-default btn-success">Save All</button></td></td>
-					</tr>
-				</table>
-			</form>
-			<div class="text-center" style="margin-bottom: 40px;">
-				<!-- Button trigger modal -->
-				<button class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">
-					Get .htaccess redirects
-				</button>
-			</div>
+					<?php
+					foreach($redirects->getAll() as $custom_id){
+
+						$fields = $redirects->getFields($custom_id);
+						?>
+						<tr id="customRow<?php echo $custom_id; ?>">
+							<td><input type="text" class="form-control" placeholder="Title" name="title[]" value="<?php echo $fields['title']; ?>" /></td>
+							<td><input type="text" class="form-control" placeholder="Section" name="section[]" value="<?php echo $fields['section']; ?>" /></td>
+							<td><input placeholder="Old Link" name="old_link[]" class="form-control" value="<?php echo $fields['old_link']; ?>" /></td>
+							<td>
+								<table class="no-border col-sm-12">
+									<tr><td><input type="text" class="form-control" placeholder="New Link" name="new_link[]" value="<?php echo $fields['new_link']; ?>" /></td><td><a title="remove row" class="remove-custom pull-right" href="#" data-id="<?php echo $custom_id; ?>">x</a></td></tr>
+								</table>
+							</td>
+						</tr>
+						<?php
+					}
+
+				}
+				?>
+				<tr id="addRow">
+					<td colspan="10"><a id="addRowBtn" class="btn btn-default pull-right" href="#">+ Add a new row</a></td>
+				</tr>
+				<tr>
+					<td colspan="10" class="text-right"><button type="submit" class="btn btn-default btn-success">Save All</button></td></td>
+				</tr>
+			</table>
+		</form>
+		<div class="text-center" style="margin-bottom: 40px;">
+			<!-- Button trigger modal -->
+			<button class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">
+				Get .htaccess redirects
+			</button>
 		</div>
-	</div>
+	</div><!-- .container -->
 
 	<script>
 
