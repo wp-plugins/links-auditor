@@ -3,7 +3,7 @@ Contributors: tonyspiro
 Tags: links auditor, redirects, redirect, pages, la redirects, bootstrap, htaccess, redirect old site links, redirect new site links, manage redirects
 Tested up to: 3.9
 
-UPDATE: This plugin is no longer supported.  Please use [301 Redirects Plugin](https://wordpress.org/plugins/301-redirects/)
+UPDATE: This plugin is no longer supported.  Please use 301 Redirects plugin.
 
 == Description ==
 UPDATE: This plugin is no longer supported.  Please use [301 Redirects Plugin](https://wordpress.org/plugins/301-redirects/)
